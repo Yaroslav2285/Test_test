@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Страница с меню и формой для комментариев</title>
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        
+
+        
+        .menu {
+            float: left;
+            width: 190px;
+            min-height: 640px;
+            background-color: #004d4d;
+            padding: 150px 10px 20px 20px;
+        }
+        .menu ul { list-style: none; }
+        .menu a {
+            display: block;           
+            color: #fff;
+            text-decoration: none;
+            padding: 3px 0;
+            font-size: 14px;
+        }
+        .menu a:hover { font-weight: bold; text-decoration: underline; }
+
+        
+        .content {
+            margin-left: 190px;
+            padding: 15px 70px 20px 15px;   
+            min-height: 640px;
+        }
+        .content .imgbox {
+            float: right;             
+            width: 150px;
+            margin: 0 0 10px 15px;
+        }
+
+        
+        .intro { display: flow-root; }
+
+        
+        .comment {
+            margin: 12px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 14px;
+            line-height: 32px;
+        }
+        .comment:before {             
+            content: "";
+            position: absolute;
+            left: 0; top: 0;
+            width: 32px; height: 32px;
+            border: 1px solid #7a93a3;
+            background-color: #e3eef5;
+        }
+        .comment:nth-of-type(3) { margin-left: 15px; }
+        .comment:nth-of-type(4) { margin-left: 30px; }
+
+        
+        .form {
+            width: 260px;
+            margin: 20px 0 0 40px;
+            padding: 10px;
+            border: 1px solid #7a93a3;
+            background-color: #e3eef5;
+            font-size: 14px;
+        }
+        .form label { display: inline-block; width: 40px; }
+        .form input[type=text] {
+            width: 190px;
+            border: 1px solid #7a93a3;
+            padding: 2px 4px;
+        }
+        .form textarea {
+            display: block;
+            width: 100%;
+            height: 50px;
+            margin: 8px 0;
+            border: 1px solid #7a93a3;
+            padding: 4px;
+        }
+        .form button {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #7a93a3;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        
+        .social {
+            position: fixed;
+            top: 200px;
+            right: 20px;
+            z-index: 10;
+        }
+        .social a {
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin-bottom: 8px;
+            border-radius: 50%;       
+            background-color: #c8000a;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 1px 2px 4px rgba(0,0,0,0.4);
+        }
+        .social a:hover { background-color: #8f0007; }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="header">
+        <div class="logo">A</div>
+        <h1>Блог о вёрстке</h1>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="#">Ссылка 1</a></li>
+            <li><a href="#">Ссылка 2</a></li>
+            <li><a href="#">Ссылка 3</a></li>
+            <li><a href="#">Ссылка 4</a></li>
+            <li><a href="#">...</a></li>
+            <li><a href="#">Ссылка N</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+      <div class="intro">
+        <div class="imgbox"><img src="img/small.jpg" alt="img"></div>
+        <p>Текст текст текст текст текст текст текст текст текст текст текст текст
+           текст текст текст текст текст текст текст текст текст текст текст текст
+           текст текст текст текст текст текст текст текст текст текст.</p>
+        <p>Текст текст текст текст текст текст текст текст текст текст текст текст
+           текст текст текст текст текст текст текст текст.</p>
+      </div>
+
+        <div class="comment">Комментарий</div>
+        <div class="comment">Комментарий</div>
+        <div class="comment">Комментарий</div>
+
+        <form class="form" action="#" method="post">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name">
+            <textarea name="comment" placeholder="Текст комментария"></textarea>
+            <button type="submit">Текст комментария</button>
+        </form>
+    </div>
+
+    <div class="social">
+        <a href="#" title="Twitter">T</a>
+        <a href="#" title="Facebook">f</a>
+        <a href="#" title="Blogger">B</a>
+    </div>
+</div>
+</body>
+</html>

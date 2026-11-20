@@ -1,0 +1,91 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, div, span, h1, h2, h3, p, a, ul, li, form, label, input, textarea, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+    background-color: #e8f1f6;
+    color: #222;
+}
+
+.page {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #cfe5f1;       
+    min-height: 100vh;
+    position: relative;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.header {
+    background-color: #004d4d;       
+    color: #fff;
+    height: 60px;
+    position: relative;              
+}
+.header .logo {
+    position: absolute;              
+    left: 10px;
+    top: 0;
+    width: 60px;
+    height: 70px;
+    background-color: #c8000a;       
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 70px;
+    z-index: 5;                      
+}
+.header h1 {
+    font-size: 15px;
+    font-weight: normal;
+    padding: 22px 0 0 90px;
+}
+
+
+h2 {
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 12px;
+    line-height: 150%;
+    margin-bottom: 10px;
+}
+
+
+.imgbox {
+    display: block;
+    border: 1px solid #7a93a3;
+    background-color: #e3eef5;
+}
+.imgbox img {
+    display: block;
+    width: 100%;
+}
+
+
+.footer {
+    clear: both;                     
+    border-top: 1px solid #7a93a3;
+    text-align: center;
+    font-size: 12px;
+    padding: 12px;
+}

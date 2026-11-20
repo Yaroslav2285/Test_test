@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Страница с трёхколоночным макетом и изображениями</title>
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        
+
+        .columns { padding: 15px; }
+
+        
+        .col {
+            float: left;
+            width: 33.33%;
+            padding: 0 8px;
+        }
+        .col h2 { margin-top: 5px; }
+        .col .imgbox { margin-bottom: 8px; }
+
+        
+        .item { margin-bottom: 14px; }
+        .item .imgbox {
+            float: left;
+            width: 45px;
+            margin: 0 8px 0 0;
+        }
+        .item p { font-size: 10px; line-height: 130%; }
+        .item:after { content: ""; display: table; clear: both; }
+
+        .col p { font-size: 10px; }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="header">
+        <div class="logo">A</div>
+        <h1>Новости</h1>
+    </div>
+
+    <div class="columns clearfix">
+        <!-- Колонка 1 -->
+        <div class="col">
+            <h2>Заголовок</h2>
+            <div class="imgbox"><img src="img/article.jpg" alt="img"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               Maecenas In felis lacus. nec nunc quam. Nunc non lectus eu lacus
+               pharetra consectetur eget id ligula. Nullam lacus ante, bibendum
+               facilisis leo vel, aliquet viverra eros. Maecenas ut vulputate
+               purus. Nullam feugiat eros augue, vel commodo risus pellentesque
+               vitae.</p>
+        </div>
+
+        <!-- Колонка 2 -->
+        <div class="col">
+            <h2>Заголовок</h2>
+            <div class="imgbox"><img src="img/photo2.jpg" alt="img"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2>Заголовок</h2>
+            <div class="imgbox"><img src="img/photo3.jpg" alt="img"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <!-- Колонка 3 -->
+        <div class="col">
+            <h2>Заголовок</h2>
+            <div class="item">
+                <div class="imgbox"><img src="img/small.jpg" alt="img"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas</p>
+            </div>
+            <h2>Заголовок</h2>
+            <div class="item">
+                <div class="imgbox"><img src="img/small.jpg" alt="img"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas</p>
+            </div>
+            <h2>Заголовок</h2>
+            <div class="item">
+                <div class="imgbox"><img src="img/small.jpg" alt="img"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">Copyright © MySite.com, 2026</div>
+</div>
+</body>
+</html>

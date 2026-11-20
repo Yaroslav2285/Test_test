@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Галерея изображений</title>
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        /* ===== Страница 3: галерея: две колонки, при узком экране — одна ===== */
+
+        .gallery { padding: 15px; text-align: center; }
+
+        /* Карточки в две колонки; при уменьшении ширины экрана автоматически переносятся в одну */
+        .card {
+            display: inline-block;
+            vertical-align: top;
+            width: 380px;            /* фиксированная ширина карточки/изображения */
+            margin: 0 10px 18px;
+            text-align: left;
+        }
+        .card a.thumb {
+            display: block;
+            border: 1px solid #7a93a3;
+            background-color: #e3eef5;
+        }
+        .card a.thumb img {
+            display: block;
+            width: 380px;            /* фиксированный размер — не меняется при масштабировании */
+            height: auto;
+            transition: opacity .2s;
+        }
+        .card a.thumb:hover img { opacity: .75; }
+        .card p { font-size: 10px; margin-top: 8px; }
+
+        /* На узких экранах — одна колонка по центру */
+        @media (max-width: 860px) {
+            .card {
+                display: block;
+                margin: 0 auto 18px;
+            }
+        }
+
+        /* Строка категорий внизу */
+        .cats {
+            text-align: center;
+            font-size: 12px;
+            padding: 10px 0 20px;
+        }
+        .cats a { color: #222; text-decoration: none; margin: 0 4px; }
+        .cats a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="header">
+        <div class="logo">A</div>
+        <h1>Галерея изображений</h1>
+    </div>
+
+    <div class="gallery">
+        <!-- target="_blank" открывает полное изображение в новой вкладке -->
+        <div class="card">
+            <a class="thumb" href="img/photo1.jpg" target="_blank"><img src="img/thumb1.jpg" alt="Фото 1"></a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas In felis lacus. nec nunc quam.</p>
+        </div>
+        <div class="card">
+            <a class="thumb" href="img/photo2.jpg" target="_blank"><img src="img/thumb2.jpg" alt="Фото 2"></a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card">
+            <a class="thumb" href="img/photo3.jpg" target="_blank"><img src="img/thumb3.jpg" alt="Фото 3"></a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card">
+            <a class="thumb" href="img/photo4.jpg" target="_blank"><img src="img/thumb4.jpg" alt="Фото 4"></a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card">
+            <a class="thumb" href="img/photo5.jpg" target="_blank"><img src="img/thumb5.jpg" alt="Фото 5"></a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card">
+            <a class="thumb" href="img/photo6.jpg" target="_blank"><img src="img/thumb6.jpg" alt="Фото 6"></a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+    <div class="cats">
+        <a href="#">Категория1</a> ::
+        <a href="#">Длинное название категории</a> ::
+        <a href="#">Категория3</a>
+    </div>
+</div>
+</body>
+</html>
